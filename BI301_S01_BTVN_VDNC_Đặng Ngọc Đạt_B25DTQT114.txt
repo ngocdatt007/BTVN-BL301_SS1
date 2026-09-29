@@ -1,0 +1,61 @@
+# BÁO CÁO PHÂN TÍCH KHỦNG HOẢNG VÀ ĐỀ XUẤT QUYẾT ĐỊNH ĐIỀU HÀNH CHO ZARA
+
+**Môn học:** BI301 - Business Intelligence  
+**Mã bài tập:** BTVN BI301 S01 - BTVN VDNC  
+**Họ và tên:** Đặng Ngọc Đạt
+**Mã sinh viên:** B25DTQT114
+
+---
+
+## 1. Bối cảnh và Chuỗi Phân Tách DIKW
+
+Hệ thống vận hành của Zara phụ thuộc chặt chẽ vào luồng dữ liệu thời gian thực (real-time data) từ các điểm chạm bán hàng để linh hoạt điều chỉnh chuỗi cung ứng[cite: 1, 2]. Đứng trước sự cố tỷ lệ hoàn trả bất thường của lô áo khoác da màu đỏ mã Z101 tại khu vực Châu Á, tập dữ liệu được phân tách theo mô hình **DIKW (Data - Information - Knowledge/Insight - Wisdom/Decision)** như sau[cite: 1, 2]:
+
+- **Data (Dữ liệu thô):** Bản ghi thô thu thập trực tiếp từ điểm chạm bán hàng: Sản phẩm Z101 (Áo khoác, Đỏ, Châu Á, Kênh Online), Số lượng bán: 500, Số lượng trả: 150, Tỷ lệ trả lỗi khóa kéo: 85%, Phản hồi khách hàng: *"Khóa ngược khó kéo, dễ kẹt"*[cite: 1, 2].
+- **Information (Thông tin):** Dữ liệu được xử lý và gán ngữ cảnh: Tỷ lệ hoàn trả chung của Z101 đạt mức 30% (150/500), cao vượt trội so với Z102 (1%) hay Z105 (2,6%)[cite: 1, 2]. Trong đó, riêng lượng sản phẩm bị trả do sự cố kẹt khóa kéo chiếm 25,5% tổng số lượng bán ra (127,5 / 500, tương đương 85% trong tổng số 150 đơn bị trả)[cite: 1, 2].
+- **Knowledge / Insight (Tri thức / Sự thật ngầm hiểu):** Thiết kế khóa kéo ngược bằng kim loại không tương thích với thói quen thao tác nhanh của người tiêu dùng Châu Á[cite: 1, 2]. Việc khóa kéo dễ kẹt gây đứt gãy trải nghiệm khách hàng, trực tiếp làm gia tăng tỷ lệ hoàn trả trên kênh Online[cite: 1, 2].
+- **Wisdom / Decision (Trí tuệ / Quyết định):** Sự thấu hiểu dẫn đến hành động chiến lược: Ban hành quyết định điều hành xử lý lô hàng tồn kho bị lỗi và điều chỉnh toàn bộ chuẩn mực thiết kế R&D[cite: 1, 2].
+
+---
+
+## 2. Nhiệm vụ 1: Ra Quyết định Cấp độ Wisdom
+
+Dựa trên Insight về sự không phù hợp của thiết kế khóa ngược đối với thói quen người dùng Châu Á, 02 quyết định điều hành cụ thể được đưa ra[cite: 1, 2]:
+
+### Quyết định 1: Xử lý lô hàng Z101 tồn kho và bị trả lại (Ngắn hạn / Vận hành)
+- **Dừng bán tức thì:** Tạm dừng kinh doanh mã Z101 trên kênh Online tại thị trường Châu Á ngay lập tức để chặn đà gia tăng chi phí logistics hai chiều và chi phí xử lý đơn hoàn trả[cite: 1, 2].
+- **Thu hồi và cải tiến kỹ thuật:** Thu hồi 150 sản phẩm bị trả cùng toàn bộ lượng hàng Z101 đang tồn kho[cite: 1, 2]. Chuyển lô hàng đến xưởng phụ trợ khu vực Châu Á để thay thế bộ khóa kéo ngược cũ bằng nút bấm (snap buttons) hoặc khóa kéo thẳng tiêu chuẩn[cite: 1, 2].
+- **Tái mở bán và xả hàng:** Mở bán lại sản phẩm cải tiến dưới mã Z101-V2 hoặc chuyển sang kênh Outlet với thông tin minh bạch nhằm giải phóng tồn kho và thu hồi vốn nhanh chóng[cite: 1, 2].
+
+### Quyết định 2: Thay đổi quy trình R&D và thiết kế sản phẩm (Dài hạn / Chiến lược)
+- **Chuẩn hóa quy chuẩn thiết kế phụ kiện theo vùng:** Xây dựng bộ tiêu chuẩn kỹ thuật R&D bắt buộc: Các chi tiết phụ kiện (khóa kéo, cúc bấm, phom dáng) phải gắn liền với thói quen tiêu dùng và đặc điểm thể chất theo từng khu vực địa lý[cite: 1, 2].
+- **Thử nghiệm trải nghiệm người dùng (Usability Testing):** Yêu cầu R&D thử nghiệm đóng/mở khóa kéo tối thiểu 100 lần trên mẫu thử (sample) với nhóm người dùng Châu Á trước khi phê duyệt sản xuất hàng loạt[cite: 1, 2].
+- **Cảnh báo tự động trên hệ thống R&D:** Tích hợp thuật toán ngăn chặn tự động trong phần mềm thiết kế, không cho phép duyệt sản xuất nếu phụ kiện mới chưa có lịch sử kiểm định thực tế tại thị trường mục tiêu[cite: 1, 2].
+
+---
+
+## 3. Nhiệm vụ 2: Phân biệt Báo cáo (Report) và Trí tuệ Doanh nghiệp (BI)
+
+### Bảng so sánh giữa Report và BI trong bối cảnh Zara
+
+| Tiêu chí | Report (Báo cáo truyền thống) | BI (Business Intelligence) |
+| :--- | :--- | :--- |
+| **Mục tiêu** | Mô tả sự việc đã xảy ra trong quá khứ (*What*)[cite: 1, 2] | Phân tích nguyên nhân gốc rễ & Đề xuất hành động (*Why & What next*)[cite: 1, 2] |
+| **Tính thời gian** | Định kỳ theo tuần, tháng, quý[cite: 1, 2] | Cập nhật thời gian thực (Real-time), cảnh báo tự động[cite: 1, 2] |
+| **Đầu ra** | Bảng số liệu tĩnh, biểu đồ mô tả[cite: 1, 2] | Insight có thể hành động (Actionable Insight)[cite: 1, 2] |
+| **Giá trị** | Quan sát diễn biến một cách thụ động[cite: 1, 2] | Hỗ trợ và tự động hóa quyết định điều hành[cite: 1, 2] |
+
+### Phân định hành động thực tế tại Zara
+
+1. **Các hành động thuộc về "Report" (Báo cáo):**
+   - Thống kê tổng số lượng bán (500) và số lượng trả (150) của mã Z101[cite: 1, 2].
+   - Vẽ biểu đồ cột so sánh tỷ lệ trả hàng giữa các mã Z101 đến Z105[cite: 1, 2].
+   - Trích xuất danh sách bình luận nhận xét của khách hàng ra file Excel[cite: 1, 2].
+   *Đánh giá:* Các hành động này mới dừng ở tầng Data và Information, giúp nhận diện hiện trạng nhưng không tạo ra giá trị ứng phó sự cố[cite: 1, 2].
+
+2. **Các hành động đem lại giá trị "BI" thực sự:**
+   - **Phân tích nguyên nhân gốc rễ (Root Cause Analysis):** Drill-down dữ liệu xác định 85% lượt trả hàng của Z101 bắt nguồn từ lỗi kỹ thuật khóa kéo[cite: 1, 2].
+   - **Đối soát dữ liệu đa chiều:** Kết hợp thuộc tính khu vực (Châu Á) với phản hồi văn bản để phát hiện sự bất tương thích về thói quen tiêu dùng[cite: 1, 2].
+   - **Kích hoạt quyết định điều hành tự động:** Tự động phát tín hiệu dừng bán trên hệ thống ERP, điều chỉnh kế hoạch tồn kho và gửi yêu cầu sửa đổi thiết kế trực tiếp tới phòng R&D[cite: 1, 2].
+
+---
